@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ElectronNET.API;
+using ElectronNET.API.Entities;
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +26,9 @@ namespace OpenANV
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthorization();
             services.AddRazorPages();
+            services.AddElectron();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +56,19 @@ namespace OpenANV
             {
                 endpoints.MapRazorPages();
             });
+
+            if (HybridSupport.IsElectronActive)
+            {
+                CreateWindow();
+            }
+        }
+
+        private async void CreateWindow()
+        {
+            var window = await Electron.WindowManager.CreateWindowAsync();
+            window.OnClosed += () => {
+                Electron.App.Quit();
+            };
         }
     }
 }
