@@ -1,0 +1,55 @@
+name: "⬇️ Issue during install"
+description: Report an issue while downloading OpenANV.
+labels: ['topic: installation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you're behind a corporate proxy, make sure to configure it properly before install.
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current behavior
+      description: Please provide a description including screenshots, stack traces, DEBUG logs, etc.
+      placeholder: When I try to download OpenANV...
+    validations:
+      required: true
+  - type: textarea
+    id: debug-logs
+    attributes:
+      label: Debug logs
+      description: Include DEBUG logs.
+      placeholder: Debug logs
+      render: Text
+  - type: input
+    id: version
+    attributes:
+      label: OpenANV Version
+      description: What version of OpenANV are you trying to install?
+      placeholder: ex. 69.420.1
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - Mac
+        - Windows
+        - other
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: Operating System Version
+      description: What is the version of the operating system you are running OpenANV on?
+      placeholder: ex 12.4
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Other
+      placeholder: Any other details?
