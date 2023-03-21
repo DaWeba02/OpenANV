@@ -1,0 +1,40 @@
+name: "❄️ Flaky test"
+title: "Flaky test: "
+labels: ["topic: flake ❄️", "stage: fire watch"]
+description: Report a flaky test in the OpenANV open-source repository.
+body:
+  - type: textarea
+    id: dashboard
+    attributes:
+      label: Link to Screenshot of failing test in IDE
+      description: Please include a link to the test failing in your IDE
+    validations:
+      required: true
+  - type: textarea
+    id: github-link
+    attributes:
+      label: Link to failing test in GitHub
+      description: Provide the GitHub link to the failing test with the line number.
+    validations:
+      required: true
+  - type: textarea
+    id: analysis
+    attributes:
+      label: Analysis
+      description: If you can, provide a quick analysis of why this test is flaky. 
+      placeholder: ex. The test appears to be flaky because...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: OpenANV Version
+      description: Provide the version of OpenANV where the flake is occurring.
+      placeholder: ex. 69.420.1
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Other
+      placeholder: Any other details?
