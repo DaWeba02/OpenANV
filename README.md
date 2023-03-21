@@ -61,7 +61,8 @@ For DEVS: Clone my Repo to your local machine, and just open the VS solution.
 
 ### Prerequisites
 
-t.b.d.
+VS package: Node.js
+.NET 6
 
 ### Installation
 
