@@ -1,0 +1,59 @@
+name: "🐛 Bug report"
+description: Report a bug found while using OpenANV.
+body:
+  - type: markdown
+    attributes:
+      value: | 
+        Issues in the OpenANV repo are reserved for bugs and feature requests only. Questions on how to use OpenANV will be closed.
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current behavior
+      description: Please provide a description including screenshots, stack traces, etc.
+      placeholder: Currently...
+    validations:
+      required: true
+  - type: textarea
+    id: desired-behavior
+    attributes:
+      label: Desired behavior
+      description: Remember, we're not familiar with the app you're testing, so please provide a clear description of what should happen.
+      placeholder: In this situation, OpenANV should...
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Test code to reproduce
+      description: Please provide a failing test or repo we can run.
+      placeholder: Here is my failing test code and the app code to run the tests on...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: OpenANV Version
+      description: What version of OpenANV are you running? If possible, please update OpenANV to the latest version first.
+      placeholder: ex. 69.420.1
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system is OpenANV running on when you are encountering your problem?  The more specific the better.  ie macOS 12.4 or Windows 10.0.19044.1889
+      placeholder: ex. macOS 12.4
+    validations:
+      required: true
+  - type: textarea
+    id: debug-logs
+    attributes:
+      label: Debug Logs
+      description: Please print the entire set of OpenANVs logs here.  This will often make it easier for OpenANV developers to help in debugging your problem.
+      placeholder: Debug logging output
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: Other
+      placeholder: Any other details?
