@@ -103,7 +103,7 @@ Distributed under the GPL-3.0 license.
 
 ## Authors
 
-* **Markus Weber** - *.NET DEV* - [Markus Weber](https://github.com/DaWeba02) - *Only DEV on this project*
+* **Markus Weber** - *.NET DEV* - [Github: DaWeba02](https://github.com/DaWeba02) - *Only DEV on this project*
 
 ## Acknowledgements
 
